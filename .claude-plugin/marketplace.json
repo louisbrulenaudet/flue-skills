@@ -1,0 +1,54 @@
+{
+  "name": "flue-skills",
+  "metadata": {
+    "description": "Agent skills for Flue — the open agent framework for durable AI agents and workflows."
+  },
+  "owner": {
+    "name": "Louis Brulé Naudet",
+    "url": "https://github.com/louisbrulenaudet"
+  },
+  "plugins": [
+    {
+      "name": "flue",
+      "description": "Build durable AI agents and workflows with Flue's programmable TypeScript harness.",
+      "source": "./",
+      "category": "developer-tools",
+      "homepage": "https://flueframework.com",
+      "tags": [
+        "flue",
+        "open-agent-framework",
+        "durable-agents",
+        "durable-streams",
+        "typescript-harness",
+        "pi-harness",
+        "pi-agent",
+        "ai-agents",
+        "agent-workflows",
+        "agent-skills",
+        "agent-tools",
+        "sandbox",
+        "sessions",
+        "session-recovery",
+        "write-once-deploy-anywhere",
+        "llm-agnostic",
+        "multi-agent",
+        "multi-agent-swarm",
+        "typescript",
+        "cloudflare",
+        "cloudflare-workers",
+        "hono",
+        "zod",
+        "zod-validation",
+        "agents-sdk",
+        "durable-objects",
+        "wrangler",
+        "deployment",
+        "database",
+        "observability",
+        "subagents",
+        "channels",
+        "coding-agent"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "flue",
+  "displayName": "Flue",
+  "description": "Build durable AI agents and workflows with Flue's programmable TypeScript harness.",
+  "version": "1.0.0",
+  "skills": "./skills/",
+  "author": {
+    "name": "Louis Brulé Naudet",
+    "url": "https://github.com/louisbrulenaudet"
+  },
+  "homepage": "https://flueframework.com",
+  "repository": "https://github.com/louisbrulenaudet/flue-skills",
+  "license": "MIT",
+  "keywords": [
+    "flue",
+    "open-agent-framework",
+    "durable-agents",
+    "durable-streams",
+    "typescript-harness",
+    "pi-harness",
+    "ai-agents",
+    "agent-workflows",
+    "agent-skills",
+    "agent-tools",
+    "sandbox",
+    "sessions",
+    "write-once-deploy-anywhere",
+    "llm-agnostic",
+    "multi-agent",
+    "typescript",
+    "cloudflare-workers",
+    "cloudflare",
+    "agents-sdk",
+    "durable-objects",
+    "hono",
+    "zod",
+    "wrangler",
+    "deployment"
+  ]
+}
