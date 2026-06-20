@@ -8,6 +8,7 @@ description: >-
 type: core
 library: flue
 library_version: '1.x (1.0 Beta line)'
+license: MIT
 ---
 
 # Flue

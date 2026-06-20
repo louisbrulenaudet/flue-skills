@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "flue",
   "description": "Build durable AI agents and workflows with Flue's programmable TypeScript harness.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Louis Brulé Naudet",
     "url": "https://github.com/louisbrulenaudet"

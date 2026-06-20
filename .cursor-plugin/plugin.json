@@ -3,7 +3,7 @@
   "name": "flue",
   "displayName": "Flue",
   "description": "Build durable AI agents and workflows with Flue's programmable TypeScript harness. Sessions, tools, skills, and sandbox compose real agent autonomy; durable streams recover interrupted work automatically. Write once, deploy anywhere, use any LLM. Powered by Pi.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "skills": "./skills/",
   "author": {
     "name": "Louis Brulé Naudet",
