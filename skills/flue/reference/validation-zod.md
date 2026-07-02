@@ -15,7 +15,7 @@
 
 This project uses **Zod (v4)** as its single runtime validator. All examples in this pack use Zod.
 
-> **One compatibility note.** Flue's *official* documentation examples use valibot for tool `parameters` and structured `result` schemas. Both Zod v4 and valibot implement the **Standard Schema** interface, and `defineTool.parameters` is documented to accept a schema object **or raw JSON Schema**. So Zod fits both slots — pass the Zod schema directly if your Flue version accepts a Standard Schema validator, otherwise pass `z.toJSONSchema(schema)`. **Confirm against `npx flue docs` for your installed version** and prefer the direct-schema form when it works.
+> **One compatibility note.** Flue's *official* documentation examples use valibot for tool `parameters` and structured `result` schemas. Both Zod v4 and valibot implement the **Standard Schema** interface, and `defineTool.parameters` is documented to accept a schema object **or raw JSON Schema**. So Zod fits both slots — pass the Zod schema directly if your Flue version accepts a Standard Schema validator, otherwise pass `z.toJSONSchema(schema)`. **Confirm against `pnpm flue docs` for your installed version** and prefer the direct-schema form when it works.
 
 ## Where schemas appear in Flue
 

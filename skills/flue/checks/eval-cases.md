@@ -26,7 +26,7 @@ For each case: give the prompt to an agent that has this skill loaded, observe w
 
 ## Cross-cutting checks (apply to every case)
 
-- The agent confirmed the API against `npx flue docs` / the live docs rather than memory.
+- The agent confirmed the API against `pnpm flue docs` / the live docs rather than memory.
 - It did not invent undocumented Flue APIs, bindings, or file paths.
 - It used Zod for validation (direct schema, or `z.toJSONSchema()` for Flue `parameters` when needed).
 - It did not wire an external database in as Flue's session store.

@@ -35,7 +35,7 @@ export default createAgent(({ id }) => ({
 }));
 ```
 
-Configuration fields (confirm against `npx flue docs` for your version):
+Configuration fields (confirm against `pnpm flue docs` for your version):
 
 | Field          | Purpose                                                        |
 | -------------- | ------------------------------------------------------------- |

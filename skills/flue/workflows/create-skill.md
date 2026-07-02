@@ -8,7 +8,7 @@
 
 ## Steps
 
-1. **Confirm the API:** `npx flue docs` ("skills", "type: 'skill'"). See `../reference/skills.md`.
+1. **Confirm the API:** `pnpm flue docs` ("skills", "type: 'skill'"). See `../reference/skills.md`.
 2. **Create the folder and `SKILL.md`:**
    ```markdown
    ---
@@ -39,9 +39,9 @@
 ## Verification
 
 ```bash
-npx flue build --target <node|cloudflare>   # import + frontmatter validated
-npx flue dev
-npx flue connect <agent> demo               # confirm the agent applies the skill
+pnpm flue build --target <node|cloudflare>   # import + frontmatter validated
+pnpm flue dev
+pnpm flue connect <agent> demo               # confirm the agent applies the skill
 ```
 
 ## References

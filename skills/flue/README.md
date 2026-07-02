@@ -14,7 +14,7 @@ Operational knowledge for building Flue AI-agent apps on Cloudflare Workers with
 1. Read `SKILL.md` and pick the sub-skill from the table / decision tree.
 2. For a concrete job, open the matching `workflows/*.md` recipe and follow it end to end.
 3. Pull supporting depth from `reference/*.md` only as needed (progressive disclosure — don't load everything).
-4. **Confirm any API against the installed Flue version** via `npx flue docs` or https://flueframework.com/docs before writing code.
+4. **Confirm any API against the installed Flue version** via `pnpm flue docs` or https://flueframework.com/docs before writing code.
 5. Run the recipe's verification step before reporting done.
 
 ## Source of truth

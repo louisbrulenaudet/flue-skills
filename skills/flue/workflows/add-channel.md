@@ -8,7 +8,7 @@
 
 ## Steps
 
-1. **Confirm the API:** `npx flue docs` ("channels"). See `../reference/channels.md`.
+1. **Confirm the API:** `pnpm flue docs` ("channels"). See `../reference/channels.md`.
 2. **Scaffold:**
    ```bash
    flue add channel teams   # installs @flue/teams, lib/teams-client.ts, channels/teams.ts
@@ -16,7 +16,7 @@
    Review the generated files — you own them now.
 3. **Set secrets** (provider-specific), e.g. `TEAMS_APP_ID`, `TEAMS_TENANT_ID`, `TEAMS_APP_PASSWORD`:
    ```bash
-   npx wrangler secret put TEAMS_APP_ID   # repeat per secret
+   pnpm wrangler secret put TEAMS_APP_ID   # repeat per secret
    ```
 4. **Add a deduplication store** (`../reference/database.md`) and claim activity ids before dispatch — the framework does not deduplicate and providers retry.
 5. **Bind the outbound message tool** to the handling agent if it must reply:
@@ -28,8 +28,8 @@
 ## Verification
 
 ```bash
-npx flue build --target cloudflare
-npx flue dev --target cloudflare
+pnpm flue build --target cloudflare
+pnpm flue dev --target cloudflare
 # Send a signed test activity from the provider's tooling; confirm:
 #  - valid event -> agent runs (check `flue logs <runId>`)
 #  - tampered/invalid signature -> rejected

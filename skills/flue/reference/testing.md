@@ -74,11 +74,11 @@ FLUE_BASE_URL=https://your-app.example.com pnpm run evals
 
 ## Keeping examples runnable
 
-Every code example you add to a Flue codebase (including in skills/docs) should be import-checked by `npx flue build` and, where it's a workflow, exercised by a smoke `curl`. Prefer copying examples into a real file and building over trusting them by eye.
+Every code example you add to a Flue codebase (including in skills/docs) should be import-checked by `pnpm flue build` and, where it's a workflow, exercised by a smoke `curl`. Prefer copying examples into a real file and building over trusting them by eye.
 
 ## Pre-deploy checklist
 
-1. `npx flue build --target <node|cloudflare>` — clean build.
+1. `pnpm flue build --target <node|cloudflare>` — clean build.
 2. Unit tests pass.
 3. `pnpm run evals` green against `flue dev`.
 4. (Cloudflare) `wrangler deploy --dry-run --config dist/<name>/wrangler.json` passes.

@@ -8,7 +8,7 @@
 
 ## Steps
 
-1. **Confirm the API:** `npx flue docs` ("routing", "app.ts"). See `../reference/routing.md`.
+1. **Confirm the API:** `pnpm flue docs` ("routing", "app.ts"). See `../reference/routing.md`.
 2. **Create/extend** `src/app.ts`:
    ```ts
    import { flue } from '@flue/runtime/routing';
@@ -36,8 +36,8 @@
 ## Verification
 
 ```bash
-npx flue build --target <node|cloudflare>
-npx flue dev
+pnpm flue build --target <node|cloudflare>
+pnpm flue dev
 curl http://localhost:3583/health                 # -> {"ok":true}
 curl -i http://localhost:3583/workflows/<name>     # -> 401 without auth
 curl -i http://localhost:3583/runs/does-not-exist  # -> 404, not 401/403

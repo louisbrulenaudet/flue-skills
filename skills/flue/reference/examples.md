@@ -1,6 +1,6 @@
 # Examples
 
-Minimal, production-shaped snippets. Confirm APIs against `npx flue docs` for your version. All examples use **Zod** (this project's validator — see `validation-zod.md`).
+Minimal, production-shaped snippets. Confirm APIs against `pnpm flue docs` for your version. All examples use **Zod** (this project's validator — see `validation-zod.md`).
 
 ## Contents
 

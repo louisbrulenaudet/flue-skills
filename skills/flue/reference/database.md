@@ -33,7 +33,7 @@ You don't manage Flue's session/run store directly — it's configured per targe
   ```
   Flue discovers `db.ts` at build time and wires the exported adapter into the generated server entry.
 
-`flue add` can fetch database installation blueprints — run `npx flue docs` for the adapters available in your version.
+`flue add` can fetch database installation blueprints — run `pnpm flue docs` for the adapters available in your version.
 
 ## Your application's business data
 

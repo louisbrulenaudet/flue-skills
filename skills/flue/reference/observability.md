@@ -90,7 +90,7 @@ Flue supports external telemetry through adapters/observers:
 | Braintrust     | Content-bearing traces, model usage, costs, eval debugging.              |
 | Sentry         | Actionable failures and explicit error logs without exporting model content by default. |
 
-Wire these via the documented adapter/`observe(...)` integration for your version — confirm exact setup with `npx flue docs`.
+Wire these via the documented adapter/`observe(...)` integration for your version — confirm exact setup with `pnpm flue docs`.
 
 ## Request correlation
 

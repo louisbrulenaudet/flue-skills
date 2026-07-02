@@ -15,7 +15,9 @@ license: MIT
 
 Flue is a TypeScript framework for building AI agents using the harness-driven architecture popularized by coding agents. An application is a set of **agents** (continuing instances that accept messages over time), **workflows** (finite agent-backed operations), **tools** (application code the model can call), **skills** (reusable instructions), and **channels** (verified provider ingress). Flue mounts a Hono HTTP surface and runs on Node.js or Cloudflare Workers; on Cloudflare it uses the Agents SDK and Durable Object SQLite for durable runs and sessions.
 
-> **CRITICAL — documentation first.** Flue's API surface is young and version-sensitive. Before writing or editing Flue code, confirm the exact API against the installed version: run `npx flue docs` (bundled offline docs) or read https://flueframework.com/docs. Do not invent APIs, bindings, file layouts, or runtime behavior. If something is not in the docs, omit it or mark it as a recommendation.
+> **CRITICAL — documentation first.** Flue's API surface is young and version-sensitive. Before writing or editing Flue code, confirm the exact API against the installed version: run `pnpm flue docs` (bundled offline docs) or read https://flueframework.com/docs. Do not invent APIs, bindings, file layouts, or runtime behavior. If something is not in the docs, omit it or mark it as a recommendation.
+
+> **Package manager — pnpm.** This skill pack assumes **pnpm** to run project-local CLIs: `pnpm flue …`, `pnpm wrangler …`. Do not use `npx` for Flue or Wrangler commands. Ensure `flue` and `wrangler` are in your project's `devDependencies` (or `dependencies`) so pnpm resolves them. The one-time skill-pack install (`npx skills add …`) is the only exception.
 
 > **CRITICAL — schema library.** This project standardizes on **Zod (v4)** for all validation, see `reference/validation-zod.md` for the exact pattern and the `z.toJSONSchema()` fallback.
 
@@ -77,8 +79,8 @@ export default createAgent(() => ({
 ```
 
 ```bash
-npx flue dev                 # watch-mode local server
-npx flue connect hello demo  # interactive session against instance "demo"
+pnpm flue dev                 # watch-mode local server
+pnpm flue connect hello demo  # interactive session against instance "demo"
 ```
 
 ## Verification is required before completion
@@ -86,7 +88,7 @@ npx flue connect hello demo  # interactive session against instance "demo"
 Every workflow recipe in this pack ends with a verification step. Do not report a task done until you have run it. The baseline gate for any Flue change:
 
 ```bash
-npx flue build --target <node|cloudflare>   # must build clean
+pnpm flue build --target <node|cloudflare>   # must build clean
 # then exercise the affected route, e.g.:
 curl "http://localhost:3583/workflows/<name>?wait=result" \
   -H 'Content-Type: application/json' -d '{ ... }'
@@ -94,11 +96,10 @@ curl "http://localhost:3583/workflows/<name>?wait=result" \
 
 ## Anti-patterns (do not do)
 
-- Inventing Flue APIs from memory instead of checking `npx flue docs` / the live docs.
+- Inventing Flue APIs from memory instead of checking `pnpm flue docs` / the live docs.
 - Wiring an external database as Flue's session/run store — that is DO SQLite (automatic on Cloudflare) or a `db.ts` adapter (Node).
 - Deploying the source `wrangler.jsonc` instead of the generated `dist/<name>/wrangler.json`.
 - Adding an agent/workflow without a uniquely-tagged `new_sqlite_classes` migration.
 - Calling a workflow's `run()` directly from app code.
 - Exposing an agent/workflow without a `route` export and auth middleware.
 - One giant skill file or overloaded `CLAUDE.md` — use progressive disclosure.
-```

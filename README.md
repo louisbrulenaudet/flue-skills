@@ -62,14 +62,14 @@ This repo serves as a plugin for multiple platforms:
 
 All content is authored in [`skills/flue/`](./skills/flue/). Edit directly in this repo.
 
-Before changing API guidance, confirm against the installed Flue version via `npx flue docs` or [flueframework.com/docs](https://flueframework.com/docs).
+Before changing API guidance, confirm against the installed Flue version via `pnpm flue docs` or [flueframework.com/docs](https://flueframework.com/docs).
 
 ## Prerequisites
 
 - Node.js 20+
-- A Flue project with the `npx flue` CLI
+- A Flue project with the `pnpm flue` CLI
 - Cloudflare account (optional — for Workers deployment; Flue also runs on Node.js)
-- Confirm APIs via `npx flue docs` or [flueframework.com/docs](https://flueframework.com/docs)
+- Confirm APIs via `pnpm flue docs` or [flueframework.com/docs](https://flueframework.com/docs)
 
 ## Links
 

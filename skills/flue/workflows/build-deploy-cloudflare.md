@@ -11,19 +11,19 @@
 1. **Confirm config.** `wrangler.jsonc` has `compatibility_date >= 2026-06-01`, `compatibility_flags: ["nodejs_compat"]`, and a `migrations` entry listing `FlueRegistry` plus every `Flue<Name>Agent|Workflow` class. Append a new tag for any new agent/workflow — never edit an existing tag. (`../reference/deployment-cloudflare.md`)
 2. **Set secrets:**
    ```bash
-   npx wrangler secret put ANTHROPIC_API_KEY
+   pnpm wrangler secret put ANTHROPIC_API_KEY
    ```
 3. **Build:**
    ```bash
-   npx flue build --target cloudflare
+   pnpm flue build --target cloudflare
    ```
 4. **Dry-run against the generated config:**
    ```bash
-   npx wrangler deploy --dry-run --config dist/<name>/wrangler.json
+   pnpm wrangler deploy --dry-run --config dist/<name>/wrangler.json
    ```
 5. **Deploy the generated config** (not the source `wrangler.jsonc`):
    ```bash
-   npx wrangler deploy --config dist/<name>/wrangler.json
+   pnpm wrangler deploy --config dist/<name>/wrangler.json
    ```
 6. **Apply your application database's migrations** to its production instance if you have one (separate from Flue's own store; see `../reference/database.md`).
 

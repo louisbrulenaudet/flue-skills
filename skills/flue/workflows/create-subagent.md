@@ -8,7 +8,7 @@
 
 ## Steps
 
-1. **Confirm the API:** `npx flue docs` ("subagents", "defineAgentProfile"). See `../reference/subagents.md`.
+1. **Confirm the API:** `pnpm flue docs` ("subagents", "defineAgentProfile"). See `../reference/subagents.md`.
 2. **Define the profile** with `name` + `description` (so the parent can select it) and least-privilege tools:
    ```ts
    import { defineAgentProfile } from '@flue/runtime';
@@ -26,12 +26,12 @@
 ## Verification
 
 ```bash
-npx flue build --target <node|cloudflare>
-npx flue dev
+pnpm flue build --target <node|cloudflare>
+pnpm flue dev
 # Prompt the parent with a task that should trigger delegation:
-npx flue connect <parent-agent> demo
+pnpm flue connect <parent-agent> demo
 # Confirm via run inspection that the subagent ran and returned the expected shape:
-npx flue logs <runId> --server http://localhost:3583
+pnpm flue logs <runId> --server http://localhost:3583
 ```
 Check: the subagent used only its allowed tools; the parent verified high-stakes claims before acting.
 

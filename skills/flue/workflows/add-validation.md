@@ -33,8 +33,8 @@
 ## Verification
 
 ```bash
-npx flue build --target <node|cloudflare>
-npx flue dev
+pnpm flue build --target <node|cloudflare>
+pnpm flue dev
 # good payload -> success; bad payload -> 400 with issues (your boundary) or schema rejection (tool/result)
 curl -i "http://localhost:3583/workflows/<wf>?wait=result" -d '{"bad":"shape"}'
 ```

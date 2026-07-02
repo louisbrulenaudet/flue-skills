@@ -114,7 +114,7 @@ const next = await session.prompt('Now recommend the next three actions.');
 The Flue workflow docs do **not** document a native retry mechanism, idempotency keys, or a `dispatch`-style queue *inside* a workflow's `run`. Treat these as your responsibility:
 
 - For at-least-once ingress (webhooks/channels), claim the event id in durable storage before doing work, and design `run` to be safe to re-enter. See `channels.md` and `database.md`.
-- Do not assume Flue retries a failed workflow for you — verify behavior against `npx flue docs` for your version before depending on it.
+- Do not assume Flue retries a failed workflow for you — verify behavior against `pnpm flue docs` for your version before depending on it.
 
 (`dispatch()` exists for **admitting** async work to an agent/workflow from app code — not as an in-`run` retry primitive.)
 

@@ -19,7 +19,7 @@ mkdir my-flue-worker && cd my-flue-worker
 npm init -y
 npm install @flue/runtime zod 'agents@^0.14.1'
 npm install -D @flue/cli wrangler
-npx flue init --target cloudflare
+pnpm flue init --target cloudflare
 ```
 
 Cloudflare requires the Agents SDK (`agents@^0.14.1`) — it backs the Durable Objects Flue uses for durable runs and sessions.
@@ -69,9 +69,9 @@ Always include `FlueRegistry`. When you add agents/workflows later, **append a n
 ## Build and deploy
 
 ```bash
-npx flue build --target cloudflare
-npx wrangler deploy --dry-run --config dist/my-flue-worker/wrangler.json   # verify first
-npx wrangler deploy --config dist/my-flue-worker/wrangler.json
+pnpm flue build --target cloudflare
+pnpm wrangler deploy --dry-run --config dist/my-flue-worker/wrangler.json   # verify first
+pnpm wrangler deploy --config dist/my-flue-worker/wrangler.json
 ```
 
 > **Deploy the generated config**, `dist/<name>/wrangler.json` — not your source `wrangler.jsonc`. The generated config carries Flue's entrypoint and DO bindings.
@@ -90,9 +90,9 @@ printf '\n.dev.vars*\n.env*\n' >> .gitignore
 Production:
 
 ```bash
-npx wrangler secret put ANTHROPIC_API_KEY
-npx flue build --target cloudflare
-npx wrangler deploy --config dist/my-flue-worker/wrangler.json
+pnpm wrangler secret put ANTHROPIC_API_KEY
+pnpm flue build --target cloudflare
+pnpm wrangler deploy --config dist/my-flue-worker/wrangler.json
 ```
 
 In CI, `wrangler deploy --secrets-file <path>` sets secrets non-interactively. Provider keys follow the model you use (`ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `CLOUDFLARE_API_TOKEN`; the `cloudflare/...` provider uses the AI binding and needs no key — see `agents.md`).
@@ -100,7 +100,7 @@ In CI, `wrangler deploy --secrets-file <path>` sets secrets non-interactively. P
 ## Local development
 
 ```bash
-npx flue dev --target cloudflare
+pnpm flue dev --target cloudflare
 ```
 
 Builds, watches, and serves a Workers dev environment on **port 3583**. Exercise an endpoint:
@@ -128,8 +128,8 @@ To serve a front-end, add an `assets` block and route API/Flue prefixes to the W
 
 ## Deployment verification
 
-1. `npx flue build --target cloudflare` succeeds.
-2. `npx wrangler deploy --dry-run --config dist/my-flue-worker/wrangler.json` passes.
+1. `pnpm flue build --target cloudflare` succeeds.
+2. `pnpm wrangler deploy --dry-run --config dist/my-flue-worker/wrangler.json` passes.
 3. After deploy, hit a workflow:
    ```bash
    curl "https://my-worker.<subdomain>.workers.dev/workflows/translate?wait=result" \

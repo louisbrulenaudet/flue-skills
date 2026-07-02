@@ -10,7 +10,7 @@
 
 ## Steps
 
-1. **Confirm the API:** `npx flue docs` ("workflows", "FlueContext", "route"). See `../reference/workflows.md`.
+1. **Confirm the API:** `pnpm flue docs` ("workflows", "FlueContext", "route"). See `../reference/workflows.md`.
 2. **Create** `src/workflows/<name>.ts`:
    ```ts
    import { createAgent, type FlueContext, type WorkflowRouteHandler } from '@flue/runtime';
@@ -41,12 +41,12 @@
 ## Verification
 
 ```bash
-npx flue build --target <node|cloudflare>
-npx flue dev
+pnpm flue build --target <node|cloudflare>
+pnpm flue dev
 curl "http://localhost:3583/workflows/<name>?wait=result" \
   -H 'Content-Type: application/json' -d '{ /* payload */ }'
 # without ?wait=result you should get 202 { runId, streamUrl, offset }
-npx flue logs <runId> --server http://localhost:3583   # inspect the run
+pnpm flue logs <runId> --server http://localhost:3583   # inspect the run
 ```
 
 ## References

@@ -10,7 +10,7 @@
 
 ## Steps
 
-1. **Confirm the API** for your version: `npx flue docs` (search "createAgent", "route"). See `../reference/agents.md`.
+1. **Confirm the API** for your version: `pnpm flue docs` (search "createAgent", "route"). See `../reference/agents.md`.
 2. **Create the file** `src/agents/<name>.ts`:
    ```ts
    import { createAgent, type AgentRouteHandler } from '@flue/runtime';
@@ -37,9 +37,9 @@
 ## Verification
 
 ```bash
-npx flue build --target <node|cloudflare>     # clean build
-npx flue dev                                   # in one terminal
-npx flue connect <name> demo                   # interactive check
+pnpm flue build --target <node|cloudflare>     # clean build
+pnpm flue dev                                   # in one terminal
+pnpm flue connect <name> demo                   # interactive check
 # or HTTP:
 curl -X POST "http://localhost:3583/agents/<name>/demo" \
   -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' \
